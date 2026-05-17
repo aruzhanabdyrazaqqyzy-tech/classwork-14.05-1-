@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <style>
+    *{
+      padding: 0%;
+      margin: 0%;
+    }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+  }
+  .top{
+    background-image: url("images/pattern-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .text{
+    margin-bottom: 500px;
+    text-align: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h1{
+    color: white;
+  }
+  input{
+    border: none;
+    background-color: white;
+    color: gray;
+    padding: 15px;
+    width: 500px;
+    border-radius: 15px 0 0 15px  ;
+  }
+  button{
+    padding: 15px;
+    border-radius: 0 15px 15px 0 ;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 10%;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.box{
+  background-color: white;
+  width: 80%;
+  border-radius: 15px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -80px;
+  z-index: 10;
+  box-shadow:  0 0 5px 0 black;
+  margin-bottom: 550px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="text">
+      <h1>IP Address Tracker</h1>
+      <div class="nav">
+        <input type="search" placeholder="Search for any IP address or domain">
+        <button><b>></b></button>
+      </div>
+    </div>
+  </div> 
+    <div class="box">
+      <div class="first">
+        <span>IP Address</span>
+      </div>
+      <div class="second">
+        <span>Location</span>
+      </div>
+      <div class="third">
+        <span>Timezone</span>
+      </div>
+      <div class="fourth">
+        <span>ISP</span>
+      </div>
+    </div>
+    <script>
+const btn = document.querySelector("button")
+const ip = document.querySelector(".ip")
+
+btn.onclick = () => {
+  ip.innerHTML = "8.8.8.8"
+}
+</script>
+</body>
+</html>
